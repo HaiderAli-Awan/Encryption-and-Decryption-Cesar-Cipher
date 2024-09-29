@@ -33,3 +33,35 @@ if __name__ == "__main__":
     print("\nBrute-force Decryption:")
     brute_force_decrypt(encrypted_text)
 
+
+Code Breakdown
+Functions
+encrypt(text, shift)
+
+Parameters:
+text (str): The plaintext message to be encrypted.
+shift (int): The number of positions to shift each letter.
+Returns: The encrypted text (ciphertext).
+Logic:
+Iterates through each character in the input text.
+If the character is an alphabet letter, it shifts the character by the specified amount, preserving the case.
+Non-alphabetic characters remain unchanged.
+decrypt(text, shift)
+
+Parameters:
+text (str): The ciphertext to be decrypted.
+shift (int): The number of positions to shift each letter back.
+Returns: The decrypted text (plaintext).
+Logic: Calls the encrypt function with a negative shift value.
+brute_force_decrypt(text)
+
+Parameters:
+text (str): The ciphertext to be decrypted.
+Returns: None. Prints all possible decryptions.
+Logic: Iterates through all possible shifts from 1 to 25 and prints the decrypted output for each shift.
+Example Usage
+The main block of the code allows users to interactively input their text and desired shift value. Upon running the script, users will see:
+
+The encrypted output.
+The decrypted output using the same shift.
+The results of brute-force attempts to decrypt the ciphertext.
